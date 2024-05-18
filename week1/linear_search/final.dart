@@ -1,22 +1,22 @@
-// int linearSearch(List<int>arr, int target){
-//   for(int i=0; i<arr.length;i++){
-//     if(target==arr[i]){
-//       return i;
-//     }
-//   }return -1;
-// }
+int linearSearch(List<int>arr, int target){
+  for(int i=0; i<arr.length;i++){
+    if(target==arr[i]){
+      return i;
+    }
+  }return -1;
+}
 
-// void main(){
-//   List<int>myList=[10,20,30,40,50,60];
-//   int target=30;
+void main(){
+  List<int>myList=[10,20,30,40,50,60];
+  int target=30;
 
-//   int result=linearSearch(myList, target);
-//   if(result!=-1){
-//     print("$result");
-//   }else{
-//     print("not found");
-//   }
-// }
+  int result=linearSearch(myList, target);
+  if(result!=-1){
+    print("$result");
+  }else{
+    print("not found");
+  }
+}
 
 // int binarSearch(List<int>arr, int target, int left, int right){
 //   if(left>right){

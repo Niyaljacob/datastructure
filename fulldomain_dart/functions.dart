@@ -1,38 +1,37 @@
-// void main(){
-//   sums(10, 20);
+// void name(){
+//   print("niyal");
 // }
 
-// void sums(int num1, int num2){
-//   int total=num1+num2;
+// void main(){
+//   name();
+// }
+
+
+// void name(int i, int j){
+//   int total=i+j;
 //   print(total);
 // }
 
+// void main(){
+//   name(20, 30);
+// }
+
+// int sums(){
+//  int number=1;
+//  return number;
+// }
 
 // void main(){
-//   String ans=names();
-//   print(ans);
-// }
-
-// String names(){
-//   return "niyal";
+  
+//   print(sums());
 // }
 
 
-// void main(){
-//   int total=sums(10, 20);
-//   print(total);
-// }
-
-// int sums(int num1, int num2){
-//   int total=num1+num2;
-//   return total;
-// }
+int sums(int a, int b)=>a+b;
+    
 
 
 void main(){
- name();
-}
-
-void name(){
-  print("niyal");
+ int total= sums(10, 20);
+  print(total);
 }

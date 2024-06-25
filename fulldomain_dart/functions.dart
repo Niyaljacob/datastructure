@@ -27,11 +27,19 @@
 // }
 
 
-int sums(int a, int b)=>a+b;
+// int sums(int a, int b)=>a+b;
     
 
 
+// void main(){
+//  int total= sums(10, 20);
+//   print(total);
+// }
+
+
 void main(){
- int total= sums(10, 20);
-  print(total);
+  List<int>num1=[1,2,3,4,5];
+  List<int>num2=[6,7,8,9];
+  List<int>nums=[...num1, ...num2];
+  print(nums);  
 }

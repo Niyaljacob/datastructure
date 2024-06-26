@@ -1,67 +1,55 @@
 class Node {
-  String value;
+  String? data;
   Node? next;
-  Node? prev;
+  Node? previous;
 
-  Node(this.value);
+  Node(this.data);
 }
 
-class DoublyLinkedList {
+class DoubleLinkedList {
   Node? head;
-  Node? tail;
 
-  void add(String value) {
-    Node newNode = Node(value);
+  void addToTail(String data) {
+    Node newNode = Node(data);
     if (head == null) {
-      head = tail = newNode;
+      head = newNode;
     } else {
-      tail!.next = newNode;
-      newNode.prev = tail;
-      tail = newNode;
+      Node? current = head;
+      while (current!.next != null) {
+        current = current.next;
+      }
+      current.next = newNode;
+      newNode.previous = current;
     }
   }
 
-  void reverse() {
+  String reverseString() {
+    if (head == null) return "";
+
     Node? current = head;
-    Node? temp = null;
-
-    while (current != null) {
-      temp = current.prev;
-      current.prev = current.next;
-      current.next = temp;
-      current = current.prev;
-    }
-
-    if (temp != null) {
-      head = temp.prev;
-    }
-  }
-
-  @override
-  String toString() {
-    Node? current = head;
-    String result = '';
-
-    while (current != null) {
-      result += current.value;
+    while (current!.next != null) {
       current = current.next;
     }
 
-    return result;
+    String reversed = "";
+    while (current != null) {
+      reversed += current.data!;
+      current = current.previous;
+    }
+
+    return reversed;
   }
 }
 
 void main() {
-  DoublyLinkedList dll = DoublyLinkedList();
-  String input = "hello";
+  String original = "hello";
+  DoubleLinkedList list = DoubleLinkedList();
 
-  for (int i = 0; i < input.length; i++) {
-    dll.add(input[i]);
+  for (int i = 0; i < original.length; i++) {
+    list.addToTail(original[i]);
   }
 
-  print("Original string: ${dll}");
-  
-  dll.reverse();
-
-  print("Reversed string: ${dll}");
+  String reversed = list.reverseString();
+  print('Original string: $original'); // Output: Original string: hello
+  print('Reversed string: $reversed'); // Output: Reversed string: olleh
 }

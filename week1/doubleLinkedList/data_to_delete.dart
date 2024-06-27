@@ -16,7 +16,7 @@ class DoubleLinkedList{
     head=linkedlist;
   }
 
-  void deleNode(int dataToDelete){
+  void deleNode(int dataToDelete){ 
     if(head==null){
       return;
     }

@@ -1,13 +1,17 @@
 void main(){
-  String name="amma";
-  String reversed=reverse(name);
-  print(reversed);
-
+  String name='amm';
+  String rev=reverse(name);
+  if(name==rev){
+    print('pali');
+  }else{
+    print('not');
+  }
 }
 
 String reverse(String name){
-  if(name.isEmpty||name.length==1){
-    return name;
+  if(name.isEmpty){
+    return "";
   }
   return reverse(name.substring(1))+name[0];
 }
+

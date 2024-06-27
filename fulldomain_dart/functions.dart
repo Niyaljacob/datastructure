@@ -37,9 +37,22 @@
 // }
 
 
-void main(){
-  List<int>num1=[1,2,3,4,5];
-  List<int>num2=[6,7,8,9];
-  List<int>nums=[...num1, ...num2];
-  print(nums);  
-}
+// void main(){
+//   List<int>num1=[1,2,3,4,5];
+//   List<int>num2=[6,7,8,9];
+//   List<int>nums=[...num1, ...num2];
+//   print(nums);  
+// }
+
+
+// void main(){
+//   String res=name();
+// print(res);
+// }
+
+// String name(){
+//   String names='niyal';
+//   return names;
+// }
+
+

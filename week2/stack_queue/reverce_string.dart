@@ -11,8 +11,8 @@ class Stack {
     }
     return _stack.removeLast();
   }
-
-  bool isEmpty() {
+  
+  bool isEmpty() { 
     return _stack.isEmpty;
   }
 }
